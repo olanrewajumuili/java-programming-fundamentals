@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class SimpleCarLoanPaymentCalculator {
     public static void main(String[] args) {
-
         double remainingBalance;
         double monthlyPayment;
         double interest;
         int months;
         double monthlyBalance;
-
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your car loan amount: ");
@@ -18,11 +16,11 @@ public class SimpleCarLoanPaymentCalculator {
         carLoanAmount = input.nextInt();
 
         System.out.println("Enter your car interest rate: ");
-        double interestRate;
+        double interestRate; // interest rate in percentage
         interestRate = input.nextInt();
 
         System.out.println("Enter your car loan tenor: ");
-        int loanTenor;
+        int loanTenor; // tenor in years
         loanTenor = input.nextInt();
 
         System.out.println("Enter your car down payment: ");
@@ -38,7 +36,6 @@ public class SimpleCarLoanPaymentCalculator {
         } else if (downPayment > carLoanAmount) {
             System.out.println("Invalid transaction: The car loan can be paid in full.");
         }
-
             remainingBalance = carLoanAmount - downPayment;
             months = loanTenor * 12;
             monthlyBalance = remainingBalance/months;
